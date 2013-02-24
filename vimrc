@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/bundle/powerline/bindings/vim
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mileszs/ack.vim'
 Bundle 'dantler/vim-alternate'
@@ -17,14 +18,18 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'vim-scripts/AutoComplPop'
+Bundle 'ervandew/supertab'
+Bundle 'davidhalter/jedi-vim'
 
 syntax enable 
-#set t_Co=256
+set t_Co=256
 colorscheme solarized
 set background=dark
 set encoding=utf-8 
+set laststatus=2
+set noshowmode
 
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],

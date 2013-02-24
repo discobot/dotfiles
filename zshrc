@@ -42,9 +42,8 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/local/share/python/:/usr/bin:/bin:/usr/sbin:/sbin
 
 ssh-add ~/.ssh/id_rsa_yandex
 ssh-add ~/.ssh/id_rsa_github
 
-~/.vim/bundle/powerline/bindings/zsh/powerline.zsh
