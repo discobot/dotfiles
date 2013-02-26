@@ -30,6 +30,7 @@ set background=dark
 set encoding=utf-8 
 set laststatus=2
 set noshowmode
+set mouse=a 
 
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
