@@ -19,11 +19,15 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/AutoComplPop'
+"Bundle 'jcf/vim-latex'
+"Bundle 'vim-scripts/AutoComplPop'
 Bundle 'ervandew/supertab'
 Bundle 'davidhalter/jedi-vim'
+Bundle "fs111/pydoc.vim"
+Bundle "orenhe/pylint.vim"
 
 syntax enable 
+let python_highlight_all = 1
 set t_Co=256
 colorscheme solarized
 set background=dark
@@ -32,6 +36,7 @@ set laststatus=2
 set noshowmode
 set mouse=a 
 
+autocmd FileType python compiler pylint
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
@@ -64,9 +69,9 @@ set backspace=indent,eol,start
 set hlsearch
 
 set autoindent
-"set expandtab
-set softtabstop=2
-set shiftwidth=2
+set expandtab
+set softtabstop=4
+set shiftwidth=4
 
 let g:tagbar_sort = 0
 set t_Co=256
