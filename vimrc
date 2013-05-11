@@ -25,6 +25,7 @@ Bundle 'ervandew/supertab'
 Bundle 'davidhalter/jedi-vim'
 Bundle "fs111/pydoc.vim"
 Bundle "orenhe/pylint.vim"
+Bundle "bronson/vim-trailing-whitespace"
 
 "Interface colors
 syntax enable 
