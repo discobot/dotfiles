@@ -23,8 +23,10 @@ Bundle 'Lokaltog/vim-powerline'
 "Bundle 'vim-scripts/AutoComplPop'
 Bundle 'ervandew/supertab'
 Bundle 'davidhalter/jedi-vim'
-Bundle "fs111/pydoc.vim"
-Bundle "orenhe/pylint.vim"
+Bundle 'fs111/pydoc.vim'
+Bundle 'orenhe/pylint.vim'
+Bundle 'johnsyweb/vim-makeshift.git'
+Bundle 'log.vim'
 Bundle "bronson/vim-trailing-whitespace"
 
 "Interface colors
@@ -81,8 +83,8 @@ set smartcase
 
 " Tabs
 set autoindent
-"set expandtab
-set noexpandtab
+set expandtab
+"set noexpandtab
 set tabstop
 set softtabstop=4
 set shiftwidth=4
