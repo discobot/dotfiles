@@ -75,8 +75,8 @@ set smartcase
 
 " Tabs
 set autoindent
-"set expandtab
-set tabstop
+set noexpandtab
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
@@ -84,7 +84,7 @@ set shiftwidth=4
 let g:tagbar_sort = 0
 
 "Powerline 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 
 "For t_Co bug inside solarized
