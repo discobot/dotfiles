@@ -19,12 +19,19 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/AutoComplPop'
+"Bundle 'jcf/vim-latex'
+"Bundle 'vim-scripts/AutoComplPop'
 Bundle 'ervandew/supertab'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'fs111/pydoc.vim'
+Bundle 'orenhe/pylint.vim'
+Bundle 'johnsyweb/vim-makeshift.git'
+Bundle 'log.vim'
+Bundle "bronson/vim-trailing-whitespace"
 
 "Interface colors
 syntax enable 
+let python_highlight_all = 1
 set t_Co=256
 colorscheme solarized
 set background=dark
@@ -42,6 +49,7 @@ set ruler
 set cursorline
 
 
+autocmd FileType python compiler pylint
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
@@ -77,6 +85,7 @@ set smartcase
 set autoindent
 set noexpandtab
 set tabstop=4
+"set expandtab
 set softtabstop=4
 set shiftwidth=4
 
