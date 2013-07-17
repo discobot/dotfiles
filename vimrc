@@ -22,7 +22,7 @@ Bundle 'Lokaltog/vim-powerline'
 "Bundle 'jcf/vim-latex'
 "Bundle 'vim-scripts/AutoComplPop'
 Bundle 'ervandew/supertab'
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 Bundle 'fs111/pydoc.vim'
 Bundle 'orenhe/pylint.vim'
 Bundle 'johnsyweb/vim-makeshift.git'
@@ -68,7 +68,7 @@ noremap <leader>o <Esc>:CtrlP<CR>
 noremap <leader>l <Esc>:CtrlPTag<CR>
 noremap <leader>t <Esc>:NERDTree<CR>
 noremap <leader>k <Esc>:TagbarOpenAutoClose<CR>
-
+"let g:EasyMotion_leader_key = '<Leader>'
 
 "What is this?
 set tags=./tags,tags;$HOME
@@ -80,6 +80,11 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" Make a simple search text object s
+vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
+    \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
+omap s :normal vs<CR>
 
 " Tabs
 set autoindent
