@@ -46,6 +46,7 @@ set number
 set wrap
 set ruler
 set cursorline
+set cc=80
 
 
 autocmd FileType python compiler pylint
