@@ -22,11 +22,12 @@ Bundle 'Lokaltog/vim-powerline'
 "Bundle 'jcf/vim-latex'
 "Bundle 'vim-scripts/AutoComplPop'
 Bundle 'ervandew/supertab'
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 Bundle 'fs111/pydoc.vim'
 Bundle 'orenhe/pylint.vim'
 Bundle 'johnsyweb/vim-makeshift.git'
 Bundle 'log.vim'
+Bundle "bronson/vim-trailing-whitespace"
 
 "Interface colors
 syntax enable 
@@ -68,7 +69,7 @@ noremap <leader>o <Esc>:CtrlP<CR>
 noremap <leader>l <Esc>:CtrlPTag<CR>
 noremap <leader>t <Esc>:NERDTree<CR>
 noremap <leader>k <Esc>:TagbarOpenAutoClose<CR>
-
+"let g:EasyMotion_leader_key = '<Leader>'
 
 "What is this?
 set tags=./tags,tags;$HOME
@@ -81,11 +82,16 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Make a simple search text object s
+vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
+    \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
+omap s :normal vs<CR>
+
 " Tabs
 set autoindent
-set expandtab
-"set noexpandtab
-set tabstop
+set noexpandtab
+set tabstop=4
+"set expandtab
 set softtabstop=4
 set shiftwidth=4
 
@@ -93,7 +99,7 @@ set shiftwidth=4
 let g:tagbar_sort = 0
 
 "Powerline 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 
 "For t_Co bug inside solarized
