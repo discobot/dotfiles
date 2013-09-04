@@ -52,6 +52,7 @@ set ruler
 set cursorline
 set noantialias
 set guifont=PragmataPro:h11
+set cc=80
 
 
 autocmd FileType python compiler pylint
