@@ -17,6 +17,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Raimondi/delimitMate'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'jonathanfilip/vim-lucius'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'dantler/vim-alternate'
 Bundle 'fs111/pydoc.vim'
@@ -37,7 +38,7 @@ syntax enable
 let python_highlight_all = 1
 set t_Co=256
 colorscheme solarized
-set background=dark
+set background=light
 
 "Interface tune
 set encoding=utf-8 
