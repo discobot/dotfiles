@@ -9,7 +9,7 @@ call vundle#rc()
 "Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 "Bundle 'jcf/vim-latex'
-"Bundle 'johnsyweb/vim-makeshift.git'
+Bundle 'johnsyweb/vim-makeshift.git'
 "Bundle 'orenhe/pylint.vim'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'Lokaltog/vim-easymotion'
@@ -110,3 +110,4 @@ let g:Powerline_colorscheme = 'solarized256'
 "For t_Co bug inside solarized
 set t_Co=256
 
+let g:syntastic_cpp_checkers=['cpplint']
