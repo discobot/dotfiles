@@ -58,7 +58,7 @@ syntax enable
 let python_highlight_all = 1
 set t_Co=256
 colorscheme solarized
-set background=light
+set background=dark
 
 "Interface tune
 set encoding=utf-8
