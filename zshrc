@@ -49,4 +49,4 @@ ssh-add ~/.ssh/id_rsa_github
 ssh-agent
 
 export DEF_MR_SERVER=bsmr-server01e.yandex.net:8013
-bindkey -v
+"bindkey -v
