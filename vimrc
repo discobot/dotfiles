@@ -22,7 +22,6 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
 NeoBundle 'ervandew/supertab'
 NeoBundle 'johnsyweb/vim-makeshift.git'
@@ -41,10 +40,13 @@ NeoBundle 'vim-scripts/Tagbar'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'bling/vim-airline'
 
+
 "Color themes
 NeoBundle 'zeis/vim-kolor'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'jonathanfilip/vim-lucius'
+NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+NeoBundle 'chriskempson/base16-vim'
 
 
 "Do i realy need this?
@@ -56,7 +58,7 @@ syntax enable
 let python_highlight_all = 1
 set t_Co=256
 colorscheme solarized
-set background=light
+set background=dark
 
 "Interface tune
 set encoding=utf-8
@@ -70,7 +72,7 @@ set wrap
 set ruler
 set cursorline
 set guifont="Source Code Pro for Powerline":h12
-set cc=80
+"set cc=80
 
 
 autocmd FileType python compiler pylint
