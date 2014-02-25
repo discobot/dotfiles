@@ -48,5 +48,11 @@ ssh-add ~/.ssh/id_rsa_yandex
 ssh-add ~/.ssh/id_rsa_github
 ssh-agent
 
+preexec() {
+	source $HOME/.ssh-agent-env
+}
+
+exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
+
 export DEF_MR_SERVER=bsmr-server01e.yandex.net:8013
-bindkey -v
+#bindkey -v
