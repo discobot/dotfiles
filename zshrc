@@ -49,4 +49,10 @@ ssh-add ~/.ssh/id_rsa_github
 ssh-agent
 
 export DEF_MR_SERVER=bsmr-server01e.yandex.net:8013
-"bindkey -v
+
+sfs()
+{
+        local dest=/Volumes/bscount-dev01g/
+	    mkdir -p "$dest"
+		sshfs "$1": /Volumes/bscount-dev01g/ -ocache=no -onolocalcaches -ovolname=ssh -ofollow_symlinks
+}

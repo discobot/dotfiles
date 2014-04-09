@@ -45,6 +45,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'zeis/vim-kolor'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'jonathanfilip/vim-lucius'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'chriskempson/base16-vim'
 
@@ -57,6 +58,15 @@ NeoBundle 'fs111/pydoc.vim'
 syntax enable
 let python_highlight_all = 1
 set t_Co=256
+let g:solarized_italic=1
+set guifont=Sauce\ Code\ Powerline:h12
+
+"Disable Bells
+set noerrorbells 
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
+
 colorscheme solarized
 set background=dark
 
@@ -71,7 +81,6 @@ set number
 set wrap
 set ruler
 set cursorline
-set guifont="Source Code Pro for Powerline":h12
 "set cc=80
 
 
