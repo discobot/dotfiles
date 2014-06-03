@@ -119,9 +119,9 @@ omap s :normal vs<CR>
 
 " Tabs
 set autoindent
-"set noexpandtab
+set noexpandtab
 set tabstop=4
-set expandtab
+"set expandtab
 set softtabstop=4
 set shiftwidth=4
 
@@ -151,7 +151,7 @@ let g:clang_format#style_options = {
             \ "IndentWidth" : 4,
             \ "TabWidth" : 4,
             \ "Standard" : "C++11",
-            \ "UseTab" : "true",
+            \ "UseTab" : "false",
 			\ "AllowShortLoopsOnASingleLine" : "false",
 			\ "BreakBeforeBraces": "Attach",
 			\ "BinPackParameters": "true"}
