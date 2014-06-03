@@ -53,4 +53,4 @@ preexec() {
 }
 
 export DEF_MR_SERVER=bsmr-server01e.yandex.net:8013
-#bindkey -v
+

@@ -49,8 +49,10 @@ NeoBundle 'benmills/vimux'
 NeoBundle 'zeis/vim-kolor'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'jonathanfilip/vim-lucius'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 
 "Do i realy need this?
@@ -61,7 +63,17 @@ NeoBundle 'fs111/pydoc.vim'
 syntax enable
 let python_highlight_all = 1
 set t_Co=256
-colorscheme solarized
+let g:solarized_italic=1
+let g:hybrid_use_iTerm_colors = 1
+
+"Disable Bells
+set noerrorbells 
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
+
+"colorscheme solarized
+colorscheme hybrid
 set background=dark
 
 "Interface tune
@@ -75,7 +87,7 @@ set number
 set wrap
 set ruler
 set cursorline
-set guifont="Source Code Pro for Powerline":h12
+set guifont=Sauce\ Code\ Powerline/13/-1/5/25/0/0/0/1/0
 set cc=80
 set lazyredraw
 set showmatch
