@@ -25,6 +25,7 @@ set rtp+=~/.vim/bundle/vundle/
 
 NeoBundle 'ervandew/supertab'
 NeoBundle 'johnsyweb/vim-makeshift.git'
+NeoBundle 'mhinz/vim-signify'
 NeoBundle 'vim-scripts/AutoComplPop'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Raimondi/delimitMate'
@@ -39,7 +40,10 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/Tagbar'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'bling/vim-airline'
-
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'kana/vim-operator-user'
+NeoBundle 'rhysd/vim-clang-format'
+NeoBundle 'benmills/vimux'
 
 "Color themes
 NeoBundle 'zeis/vim-kolor'
@@ -48,6 +52,7 @@ NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 
 "Do i realy need this?
@@ -59,7 +64,7 @@ syntax enable
 let python_highlight_all = 1
 set t_Co=256
 let g:solarized_italic=1
-set guifont=Sauce\ Code\ Powerline:h12
+let g:hybrid_use_iTerm_colors = 1
 
 "Disable Bells
 set noerrorbells 
@@ -67,7 +72,8 @@ set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
-colorscheme solarized
+"colorscheme solarized
+colorscheme hybrid
 set background=dark
 
 "Interface tune
@@ -81,7 +87,10 @@ set number
 set wrap
 set ruler
 set cursorline
-"set cc=80
+set guifont=Sauce\ Code\ Powerline/13/-1/5/25/0/0/0/1/0
+set cc=80
+set lazyredraw
+set showmatch
 
 
 autocmd FileType python compiler pylint
@@ -122,9 +131,9 @@ omap s :normal vs<CR>
 
 " Tabs
 set autoindent
-set noexpandtab
+"set noexpandtab
 set tabstop=4
-"set expandtab
+set expandtab
 set softtabstop=4
 set shiftwidth=4
 
@@ -139,3 +148,23 @@ let g:airline_powerline_fonts=1
 set t_Co=256
 
 let g:syntastic_cpp_checkers=['cpplint']
+
+" Every buffer in new Tabs
+":au BufAdd,BufNewFile,BufRead * nested tab sball
+
+" Clang format
+autocmd FileType c,cpp,objc map <buffer><Leader>x  <Plug>(operator-clang-format))
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
+"let g:clang_format#code_style='llvm'
+let g:clang_format#style_options = {
+			\ "AccessModifierOffset" : -4,
+            \ "IndentWidth" : 4,
+            \ "TabWidth" : 4,
+            \ "Standard" : "C++11",
+            \ "UseTab" : "true",
+			\ "AllowShortLoopsOnASingleLine" : "false",
+			\ "BreakBeforeBraces": "Attach",
+			\ "BinPackParameters": "true"}
+

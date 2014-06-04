@@ -48,11 +48,11 @@ ssh-add ~/.ssh/id_rsa_yandex
 ssh-add ~/.ssh/id_rsa_github
 ssh-agent
 
+preexec() {
+	source $HOME/.ssh-agent-env
+}
+
+exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
+
 export DEF_MR_SERVER=bsmr-server01e.yandex.net:8013
 
-sfs()
-{
-        local dest=/Volumes/bscount-dev01g/
-	    mkdir -p "$dest"
-		sshfs "$1": /Volumes/bscount-dev01g/ -ocache=no -onolocalcaches -ovolname=ssh -ofollow_symlinks
-}
