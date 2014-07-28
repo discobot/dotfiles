@@ -32,7 +32,7 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'dantler/vim-alternate'
 NeoBundle 'gmarik/vundle'
-NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
@@ -44,6 +44,10 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'benmills/vimux'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'autotag'
+
+NeoBundle 'Valloric/YouCompleteMe'
 
 "Color themes
 NeoBundle 'zeis/vim-kolor'
@@ -62,19 +66,19 @@ NeoBundle 'fs111/pydoc.vim'
 "Interface colors
 syntax enable
 let python_highlight_all = 1
-set t_Co=256
+set t_Co=16
 let g:solarized_italic=1
 let g:hybrid_use_iTerm_colors = 1
 
 "Disable Bells
-set noerrorbells 
+set noerrorbells
 set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
 "colorscheme solarized
-colorscheme hybrid
-set background=dark
+colorscheme solarized
+set background=light
 
 "Interface tune
 set encoding=utf-8
@@ -112,6 +116,8 @@ noremap <leader>o <Esc>:CtrlP<CR>
 noremap <leader>l <Esc>:CtrlPTag<CR>
 noremap <leader>t <Esc>:NERDTree<CR>
 noremap <leader>k <Esc>:TagbarOpenAutoClose<CR>
+map <Leader> <Plug>(easymotion-prefix)
+map s <Plug>(easymotion-bd-w)
 
 "What is this?
 set tags=./tags,tags;$HOME
@@ -145,7 +151,7 @@ let g:tagbar_sort = 0
 let g:airline_powerline_fonts=1
 
 "For t_Co bug inside solarized
-set t_Co=256
+set t_Co=16
 
 let g:syntastic_cpp_checkers=['cpplint']
 

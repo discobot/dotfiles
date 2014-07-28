@@ -52,5 +52,5 @@ preexec() {
 	source $HOME/.ssh-agent-env
 }
 
-export DEF_MR_SERVER=bsmr-server01e.yandex.net:8013
+export DEF_MR_SERVER=bsmr-server01i.yandex.ru:8013
 
