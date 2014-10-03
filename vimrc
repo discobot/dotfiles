@@ -25,7 +25,6 @@ set rtp+=~/.vim/bundle/vundle/
 
 NeoBundle 'ervandew/supertab'
 NeoBundle 'johnsyweb/vim-makeshift.git'
-NeoBundle 'mhinz/vim-signify'
 NeoBundle 'vim-scripts/AutoComplPop'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Raimondi/delimitMate'
@@ -66,7 +65,7 @@ NeoBundle 'fs111/pydoc.vim'
 "Interface colors
 syntax enable
 let python_highlight_all = 1
-set t_Co=16
+"set t_Co=16
 let g:solarized_italic=1
 let g:hybrid_use_iTerm_colors = 1
 
@@ -77,8 +76,8 @@ set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
 "colorscheme solarized
-colorscheme solarized
-set background=light
+colorscheme ron
+set background=dark
 
 "Interface tune
 set encoding=utf-8
@@ -173,4 +172,6 @@ let g:clang_format#style_options = {
 			\ "AllowShortLoopsOnASingleLine" : "false",
 			\ "BreakBeforeBraces": "Attach",
 			\ "BinPackParameters": "true"}
+
+let g:airline_theme='bubblegum'
 
