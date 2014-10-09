@@ -32,6 +32,7 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'dantler/vim-alternate'
 NeoBundle 'gmarik/vundle'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
@@ -91,7 +92,7 @@ set wrap
 set ruler
 set cursorline
 set guifont=Sauce\ Code\ Powerline/13/-1/5/25/0/0/0/1/0
-set cc=80
+"set cc=80
 set lazyredraw
 set showmatch
 
