@@ -7,7 +7,7 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -46,6 +46,9 @@ NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'autotag'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'fisadev/vim-isort'
 
 NeoBundle 'Valloric/YouCompleteMe'
 
@@ -57,11 +60,14 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'abra/vim-abra'
 
 
 "Do i realy need this?
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'fs111/pydoc.vim'
+
+call neobundle#end()
 
 "Interface colors
 syntax enable
@@ -76,8 +82,9 @@ set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
-"colorscheme solarized
-colorscheme ron
+colorscheme solarized
+"colorscheme ron
+"colorscheme abra
 set background=dark
 
 "Interface tune
@@ -91,13 +98,12 @@ set number
 set wrap
 set ruler
 set cursorline
-set guifont=Sauce\ Code\ Powerline/13/-1/5/25/0/0/0/1/0
+set guifont=Incosolata\ for\ Powerline
 "set cc=80
 set lazyredraw
 set showmatch
 
 
-autocmd FileType python compiler pylint
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
@@ -111,7 +117,7 @@ set wildmenu
 filetype plugin indent on
 
 "Hotkeys
-let mapleader=","
+let mapleader="\<Space>"
 noremap <leader>o <Esc>:CtrlP<CR>
 noremap <leader>l <Esc>:CtrlPTag<CR>
 noremap <leader>t <Esc>:NERDTree<CR>
@@ -123,6 +129,8 @@ map s <Plug>(easymotion-bd-w)
 set tags=./tags,tags;$HOME
 autocmd BufWritePost,FileWritePost *.js silent! !jsctags . &
 set backspace=indent,eol,start
+
+nnoremap <Leader>w :wa<CR>
 
 " Search
 set hlsearch
@@ -137,7 +145,7 @@ omap s :normal vs<CR>
 
 " Tabs
 set autoindent
-set noexpandtab
+set expandtab
 set tabstop=4
 "set expandtab
 set softtabstop=4
@@ -176,3 +184,7 @@ let g:clang_format#style_options = {
 
 let g:airline_theme='bubblegum'
 
+
+"expand region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
