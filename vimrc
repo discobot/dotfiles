@@ -47,6 +47,8 @@ NeoBundle 'benmills/vimux'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'autotag'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'fisadev/vim-isort'
 
 NeoBundle 'Valloric/YouCompleteMe'
@@ -59,6 +61,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'abra/vim-abra'
 
 
 "Do i realy need this?
@@ -81,6 +84,8 @@ set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
 colorscheme solarized
+"colorscheme ron
+"colorscheme abra
 set background=dark
 
 "Interface tune
@@ -94,6 +99,8 @@ set number
 set wrap
 set ruler
 set guifont=Sauce\ Code\ Powerline/13/-1/5/25/0/0/0/1/0
+=======
+set cursorline
 "set cc=80
 set lazyredraw
 set showmatch
@@ -113,7 +120,7 @@ set wildmenu
 filetype plugin indent on
 
 "Hotkeys
-let mapleader=","
+let mapleader="\<Space>"
 noremap <leader>o <Esc>:CtrlP<CR>
 noremap <leader>l <Esc>:CtrlPTag<CR>
 noremap <leader>t <Esc>:NERDTree<CR>
@@ -125,6 +132,8 @@ map s <Plug>(easymotion-bd-w)
 set tags=./tags,tags;$HOME
 autocmd BufWritePost,FileWritePost *.js silent! !jsctags . &
 set backspace=indent,eol,start
+
+nnoremap <Leader>w :wa<CR>
 
 " Search
 set hlsearch
@@ -178,3 +187,7 @@ let g:clang_format#style_options = {
 
 let g:airline_theme='bubblegum'
 
+
+"expand region
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)

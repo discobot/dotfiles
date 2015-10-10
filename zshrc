@@ -48,9 +48,18 @@ ssh-add ~/.ssh/id_rsa_yandex
 ssh-add ~/.ssh/id_rsa_github
 ssh-agent
 
-preexec() {
-	source $HOME/.ssh-agent-env
-}
 
-export DEF_MR_SERVER=bsmr-server01i.yandex.ru:8013
+export DEBFULLNAME="Philip Sinitsyn"
+export EMAIL="phill@yandex-team.ru"
+export ANDROID_HOME=/Users/phill/Library/Android/sdk
+export ANDROID_NDK=/Users/phill/Library/Android/ndk
+export PKG_ROOT=/Users/phill/dev
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export PATH=/Users/phill/torch/install/bin:$PATH
+export LD_LIBRARY_PATH=/Users/phill/torch/install/lib:$LD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/Users/phill/torch/install/lib:$DYLD_LIBRARY_PATH
+
 
