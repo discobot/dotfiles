@@ -7,7 +7,7 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -46,6 +46,8 @@ NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'autotag'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'fisadev/vim-isort'
 
 NeoBundle 'Valloric/YouCompleteMe'
 
@@ -63,6 +65,8 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'fs111/pydoc.vim'
 
+call neobundle#end()
+
 "Interface colors
 syntax enable
 let python_highlight_all = 1
@@ -76,8 +80,7 @@ set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
-"colorscheme solarized
-colorscheme ron
+colorscheme solarized
 set background=dark
 
 "Interface tune
@@ -90,14 +93,13 @@ set ttymouse=xterm2
 set number
 set wrap
 set ruler
-set cursorline
 set guifont=Sauce\ Code\ Powerline/13/-1/5/25/0/0/0/1/0
 "set cc=80
 set lazyredraw
 set showmatch
 
 
-autocmd FileType python compiler pylint
+"autocmd FileType python compiler pylint
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
@@ -137,7 +139,7 @@ omap s :normal vs<CR>
 
 " Tabs
 set autoindent
-set noexpandtab
+set expandtab
 set tabstop=4
 "set expandtab
 set softtabstop=4
