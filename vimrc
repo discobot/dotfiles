@@ -22,6 +22,7 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 set rtp+=~/.vim/bundle/vundle/
+set shell=bash
 
 NeoBundle 'ervandew/supertab'
 NeoBundle 'johnsyweb/vim-makeshift.git'
@@ -30,10 +31,7 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'dantler/vim-alternate'
-NeoBundle 'gmarik/vundle'
-NeoBundle 'rking/ag.vim'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
@@ -82,7 +80,7 @@ set novisualbell
 set t_vb=
 autocmd! GUIEnter * set vb t_vb=
 
-colorscheme solarized
+colorscheme ron
 "colorscheme ron
 "colorscheme abra
 set background=dark
@@ -98,7 +96,7 @@ set number
 set wrap
 set ruler
 set cursorline
-set guifont=Incosolata\ for\ Powerline
+set guifont=InputMonoCondensed\ Thin:h13
 "set cc=80
 set lazyredraw
 set showmatch
