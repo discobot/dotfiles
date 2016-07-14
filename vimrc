@@ -44,6 +44,7 @@ NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'benmills/vimux'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'autotag'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'fisadev/vim-isort'
@@ -95,13 +96,14 @@ set ttymouse=xterm2
 set number
 set wrap
 set ruler
+set guifont=Sauce\ Code\ Powerline/13/-1/5/25/0/0/0/1/0
 set cursorline
-set guifont=InputMonoCondensed\ Thin:h13
 "set cc=80
 set lazyredraw
 set showmatch
 
 
+"autocmd FileType python compiler pylint
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
